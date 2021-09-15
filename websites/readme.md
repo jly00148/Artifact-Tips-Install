@@ -1,5 +1,5 @@
 # 神器网站：
-* [狗屁不同文章生成器](:https://www.xiaodigu.cn/gpwz/)
+* [狗屁不通文章生成器](https://www.xiaodigu.cn/gpwz/)
 * [互联网黑话生成器](http://www.shadowingszy.top/text-generator/index.html)
 * [编程导航](https://www.code-nav.cn/)
 * [构建、测试和发现前端代码的最佳场所](https://codepen.io/)
