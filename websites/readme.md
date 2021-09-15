@@ -1,0 +1,12 @@
+# 神器网站：
+* [狗屁不同文章生成器](:https://www.xiaodigu.cn/gpwz/)
+* [互联网黑话生成器](http://www.shadowingszy.top/text-generator/index.html)
+* [编程导航](https://www.code-nav.cn/)
+* [构建、测试和发现前端代码的最佳场所](https://codepen.io/)
+* [使用css制作的流行布局和图案](https://csslayout.io/)
+* [在线简单图形css](https://enjoycss.com/)
+* [高级css按钮生成器](http://cssbuttongen.com/)
+* [css条纹生成器](stripesgenerator.com)
+* [animate.css](https://animate.style/)
+* [bug答疑](https://stackoverflow.com/)
+* [中文版答疑](segmentfault思否)
