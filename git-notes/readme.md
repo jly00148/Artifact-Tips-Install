@@ -37,7 +37,7 @@
 * git reset --hard HEAD 丢弃所有工作区的更改，和最后一次的commit的内容一致
 * git reset --hard commit_id：回退想要的版本
 * git reset --hard HEAD^：HEAD表示当前版本，回退上个版本是HEAD^，上上个版本是HEAD^^
-* git rm filename	删除工作区文件。
+* 强制删除暂存区的文件：git rm -f '文件名'
 * 重命名工作区文件：git mv 旧文件 新文件
 
 ## 提交日志：
@@ -50,10 +50,18 @@
 * 创建并切换分支：命令:git checkout -b 分支名
 * 查看当前分支：git branch
 * 合并分支命令:git merge 分支名
-* 抓取远程分支(前提远程仓库有分支，该命令创建本地分支并且与远程分支关联)：   git checkout -b 本地分支名  远程仓库名/远程分支名
-* 关联分支：命令:git branch --set-upstream-to=远程仓库/远程分支名 本地分支名
-* 推送分支：命令:git push 远程仓库 分支名
+* 抓取远程分支(前提远程仓库有分支，该命令创建本地分支并且与远程分支关联)： git checkout -b 本地分支名  远程仓库名/远程分支名
+* 本地分支与远程分支关联：git branch --set-upstream-to=远程仓库/远程分支名 本地分支名
 * 查看已有的本地及远程分支：git branch -a
+* 查看远程仓库：git branch -r
+* 创建远程分支：git push 远程仓库名 本地分支名：远程分支名
+>创建远程分支之前必须有本地分支，本地分支最好和远程分支名保持一致
+* 在本地更新远程仓库信息：git fetch origin (git branch -r命令无法显示远程仓库分支名故需要此命令)
+* 删除远程分支：git push 远程仓库 --delete  远程分支名
+* 查看分支关联：git branch -vv
+* 推送分支：命令:git push 远程仓库名 远程分支名( 分支名为master时是推送主分支，如果是远程是dev分支的话就是推送dev的分支，若直接是git push就是推送所有相关联的分支，包括主分支master和其他分支例如dev分支，各自推送各自分支并不相互影响)
+* 推送分支并且与远程仓库相关联：git push -u 远程仓库名 远程分支名
+* 从远程仓库分支同步代码：git pull origin 远程分支名:本地分支名
 * 删除本地分支：git branch -d 本地分支名
 * 删除远程分支：git push origin --delete ’远程分支名‘
 >从远程库clone时，默认情况下只有看到本地master分支，该命令创建本地分支并且与远程分支关联，本地分支名最好和远程分支名保持一致，抓取分支之前远程仓库必须有该分支
@@ -78,3 +86,7 @@
   * git fetch 	从远程获取代码库
   *  git pull 	下载远程代码并合并
   * git push 	上传远程代码并合并
+
+
+## 出现的问题需要的注意点：
+1. fatal: pathspec 'aa.txt' did not match any files：文件没有add 跟踪
